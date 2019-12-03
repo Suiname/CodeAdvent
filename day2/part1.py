@@ -1,21 +1,19 @@
-
 def gravity_assist(positions):
 	for i in range(len(positions)):
 		position = int(positions[i])
 		if i % 4 == 0:
 			if position == 99:
 				return positions
-			elif position == 1:
+			elif position == 1 or position == 2:
 				result_index = int(positions[i+3])
 				first_index = int(positions[i+1])
 				second_index = int(positions[i+2])
-				positions[result_index] = int(positions[first_index]) + int(positions[second_index])
-			elif position == 2:
-				result_index = int(positions[i+3])
-				first_index = int(positions[i+1])
-				second_index = int(positions[i+2])
-				positions[result_index] = int(positions[first_index]) * int(positions[second_index])
+				if position == 1:
+					positions[result_index] = int(positions[first_index]) + int(positions[second_index])
+				else:
+					positions[result_index] = int(positions[first_index]) * int(positions[second_index])
 	return positions
+
 
 def make_array():
 	result = []
@@ -25,6 +23,7 @@ def make_array():
 			result = line.split(',')
 			line = lines.readline()
 	return result
+
 
 if __name__ == "__main__":
 	test_list1 = [1,0,0,0,99]

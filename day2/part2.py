@@ -1,5 +1,6 @@
 from part1 import gravity_assist, make_array
 
+
 def find_params():
 	for i in range(100):
 		for j in range(100):
