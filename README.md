@@ -1,0 +1,2 @@
+## Advent of Code
+My solutions to advent of code.  Each day's problem and solution are put in a separate subdirectory.  My input are saved in each directory as input.txt, if applicable, you can replace this file with your own to get the correct answer for your account.  Problem set is [available here](https://adventofcode.com/2019)
